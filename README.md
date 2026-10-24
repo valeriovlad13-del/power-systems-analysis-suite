@@ -6,7 +6,7 @@ Interactive educational tools for studying power systems analysis. The project i
 
 ## Development status
 
-The repository has just been initialized. The 12 modules built as standalone prototypes in the development conversation have not yet been imported into this repository. The existing `index.html` is an empty placeholder and is intentionally retained until the suite architecture is ready.
+The repository now contains a master module index and 12 initial repository-native standalone calculator pages. These are first-pass implementations aligned to the roadmap, not a line-for-line import of the earlier standalone prototypes. The earlier prototypes' broader features and known issues still need to be compared against these pages during the module-by-module audit.
 
 ## Planned modules
 
