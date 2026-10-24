@@ -1,1 +1,32 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interactive educational calculators and worked problems for power systems analysis.">
+<title>Power Systems Analysis Suite</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#111c2e;--panel2:#17243a;--line:#2a3b54;--text:#e7eef8;--muted:#9aabc1;--cyan:#45d5e8;--amber:#ffbf69}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}header{padding:clamp(24px,5vw,58px) clamp(18px,5vw,64px);background:linear-gradient(130deg,#111e33,#102d43);border-bottom:1px solid var(--line)}.eyebrow{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:.6rem 0}header p{max-width:780px;color:#c3d0e1}main{max-width:1320px;margin:auto;padding:28px clamp(14px,3vw,38px) 50px}.notice{border:1px solid #755c37;background:#302719;color:#ffe0a7;padding:13px 15px;border-radius:12px;margin-bottom:22px}.sectionhead{display:flex;justify-content:space-between;gap:15px;align-items:end;margin:26px 0 13px}.sectionhead h2{margin:0;font-size:1.3rem}.sectionhead p{margin:0;color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px}.module{display:flex;flex-direction:column;min-height:188px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}.module:hover{border-color:var(--cyan);transform:translateY(-2px)}.num{color:var(--cyan);font-weight:850;font-size:.8rem;letter-spacing:.08em}.module h3{font-size:1.05rem;line-height:1.3;margin:10px 0}.module p{color:var(--muted);font-size:.9rem;margin:0 0 15px}.status{margin-top:auto;color:var(--amber);font-size:.78rem;font-weight:750}.module[aria-disabled=true]{opacity:.78;cursor:default}.module[aria-disabled=true]:hover{transform:none;border-color:var(--line)}footer{border-top:1px solid var(--line);padding:20px;text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Engineering study tools · Version 0.1</div><h1>Power Systems<br>Analysis Suite</h1><p>A structured set of interactive calculators, worked solutions, and practice problems for learning power systems analysis. Each module is designed to stand alone and will share a consistent interface and solution format.</p></header>
+<main>
+<div class="notice"><strong>Educational use only.</strong> Results must not be used as field-ready settings or as a substitute for an independently verified engineering study. The modules are being migrated and audited; module links will be enabled as each page is committed and checked.</div>
+<div class="sectionhead"><h2>Learning modules</h2><p>12 planned modules</p></div>
+<div class="grid" id="modules">
+<a class="module" href="modules/01-per-unit/index.html"><span class="num">MODULE 01</span><h3>Per-Unit System &amp; Base Impedance</h3><p>System bases, per-unit quantities, impedance conversion, and equipment base changes.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/02-complex-phasors/index.html"><span class="num">MODULE 02</span><h3>Complex Phasors &amp; Network Conversion</h3><p>Complex arithmetic, phasors, impedance combinations, and network transformations.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/03-three-phase-power/index.html"><span class="num">MODULE 03</span><h3>Three-Phase Power &amp; Capacitor Sizing</h3><p>Active, reactive and apparent power, power factor, and correction.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/04-symmetrical-components/index.html"><span class="num">MODULE 04</span><h3>Symmetrical Components</h3><p>Sequence quantities, phase conversion, and unbalanced-system analysis.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/05-fault-analysis/index.html"><span class="num">MODULE 05</span><h3>Fault Analysis</h3><p>Symmetrical and unsymmetrical faults and sequence-network calculations.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/06-transmission-line-parameters/index.html"><span class="num">MODULE 06</span><h3>Transmission Line Parameters</h3><p>Resistance, GMD/GMR, inductance, capacitance, and shunt susceptance.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/07-transmission-line-performance/index.html"><span class="num">MODULE 07</span><h3>Transmission Line Performance</h3><p>ABCD parameters, line models, regulation, sending-end values, and efficiency.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/08-ybus-load-flow/index.html"><span class="num">MODULE 08</span><h3>Ybus &amp; Load Flow</h3><p>Bus-admittance formation and iterative power-flow calculations.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/09-economic-dispatch/index.html"><span class="num">MODULE 09</span><h3>Economic Dispatch &amp; Plant Performance</h3><p>Generation cost, dispatch, loading limits, and plant performance factors.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/10-synchronous-machines/index.html"><span class="num">MODULE 10</span><h3>Synchronous Machines &amp; Stability</h3><p>Machine equations, power-angle relationships, and simplified stability.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/11-distribution-transformers/index.html"><span class="num">MODULE 11</span><h3>Distribution Design &amp; Transformer Sizing</h3><p>Transformer sizing, demand estimates, feeder voltage drop, and losses.</p><span class="status">Migration pending</span></a>
+<a class="module" href="modules/12-relay-protection/index.html"><span class="num">MODULE 12</span><h3>Relay Protection &amp; Fault Coordination</h3><p>CT ratios, relay pickup, inverse-time operation, and grading margins.</p><span class="status">Migration pending</span></a>
+</div>
+</main><footer>Power Systems Analysis Suite · Educational prototype</footer>
+</body></html>
