@@ -1,42 +1,45 @@
 # Twelve-Module Revision Plan
 
-## Phase 0 — Establish baseline
-- Inventory repository files and currently available standalone prototypes.
-- Preserve each prototype before structural changes.
-- Record module-specific calculators, current formulas, input/output conventions, and known issues.
-- Build a migration checklist; do not mark an audit complete without actual tests.
+## Phase 0 — Baseline and source inventory
+- Inventory all twelve repository pages and the supplied reviewer PDFs.
+- Keep module pages independently openable.
+- Track source-derived questions separately from supplementary examples.
 
-## Phase 1 — Shared foundation
-- Add shared CSS and small shared JS helpers only after comparing modules.
-- Define design tokens, common worked-example layout, solution steps, units, error messages, tabs/navigation, and accessibility conventions.
-- Keep each module independently openable.
+## Phase 1 — Shared module structure
+Every module must show sections in the same order:
+1. Interactive tools
+2. Theory & formulas
+3. Reviewer problems
+4. Worked solutions
+5. Supplementary practice
+6. Validation & references
 
-## Phase 2 — Module-by-module audit
-For every module:
-- Inspect formulas, dimensional consistency, sign conventions, and assumptions.
-- Independently calculate reference cases.
-- Test input validation, edge cases, and output formatting.
-- Fix known issues and document unsupported conditions.
-- Add source-relevant worked problems and original supplementary exercises.
-- Record regression tests and test status.
+Use a consistent numerical solution order: Source/problem ID, Given, Find, Formula, Substitution, step-by-step calculation, final answer with units, engineering interpretation.
 
-## Phase 3 — Review problem mapping
-- Module 1: per-unit and base impedance.
-- Module 2: complex arithmetic, phasors, impedance/network transformations.
-- Module 3: AC power, three-phase relationships, power-factor correction.
-- Module 4: symmetrical components and sequence conversion.
-- Module 5: symmetrical fault networks and fault-current calculations.
-- Module 6: conductor resistance, GMD/GMR, inductance, capacitance, charging current.
-- Module 7: ABCD models, short/medium/long lines, sending/receiving end, regulation and efficiency.
-- Module 8: Ybus and load flow; supplementary problems may be needed if reviewer coverage is limited.
-- Module 9: economic dispatch and plant factors; supplementary problems may be needed.
-- Module 10: synchronous machines and stability; supplementary problems may be needed.
-- Module 11: distribution and transformer sizing; supplementary problems may be needed.
-- Module 12: CT ratios, pickup, IEC inverse-time curves, grading/coordination; reviewer coverage may be limited, so label original questions supplementary.
+## Phase 2 — Reviewer mapping (based on visible PDF page scans)
 
-Confirm exact source question/page mapping from the source PDF images before publishing.
+| Source | Printed page | Problem(s) | Destination | Current status |
+|---|---:|---|---|---|
+| EE-32 — Power Systems Analysis 2 | 1 | 1: per-unit voltage using 345 kV actual, 300 kV base | Module 01 | Integrated; solution appears on printed page 2 |
+| EE-32 — Power Systems Analysis 2 | 1 | 2: complex expression to rectangular form | Module 02 | Pending; expression too unclear to transcribe confidently |
+| EE-32 — Power Systems Analysis 2 | 1 | 3–5: symmetrical components / sequence-current calculations | Module 04 | Mapping identified; exact statements and answers need verification before integration |
+| EE-32 — Power Systems Analysis 2 | 1 | 6–10: zero-sequence and fault-current calculations | Module 05 | Mapping identified; exact statements and answers need verification before integration |
+| EE-29 — Power Systems Analysis 1 | 1–2 | 2–5, 7, 17–18: line inductance, capacitance, geometry, propagation | Module 06 | Mapping identified; transcribe and check one question at a time |
+| EE-29 — Power Systems Analysis 1 | 1–3 | 1, 6, 8–16, 19–20: line performance, voltage, regulation, ABCD, charging current, SIL, nominal-T | Module 07 | Mapping identified; transcribe and check one question at a time |
+| EE-29 / EE-32 | 1–3 scanned question pages | No clearly verified question yet | Modules 03, 08–12 | Reviewer coverage not established; keep original practice clearly labeled supplementary |
 
-## Phase 4 — Integration
-- Build the dashboard only after module structures and test conventions stabilize.
-- Add module cards, progress/accessibility and consistent navigation.
-- Run cross-module regression and mobile/desktop checks.
+**Important:** This is a source-mapping index, not a claim that every listed problem is already integrated. Only Module 01, EE-32 Problem 1, is marked integrated at this stage. Problem number/page mappings must be rechecked against the actual scan when transcribing each item. The PDF images are low resolution; unclear expressions and values must remain pending.
+
+## Phase 3 — Technical audit for every module
+- Independently calculate reference cases and dimensional units.
+- Test invalid, zero, negative (where applicable), extreme, and singular inputs.
+- Check complex arithmetic, signs, angles, unit conversion, and finite outputs.
+- Clear stale results after failed calculations.
+- Do not call source-level checks browser tests.
+
+## Phase 4 — Integration and release
+- Align all modules to the shared section order and styles.
+- Add source-derived problems with exact citations and worked answers only after verification.
+- Add original practice questions separately.
+- Perform browser regression on desktop and mobile.
+- Deploy only after all twelve modules pass the agreed validation checklist.
